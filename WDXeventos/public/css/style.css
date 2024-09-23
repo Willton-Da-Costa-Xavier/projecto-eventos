@@ -1,0 +1,54 @@
+/* Estilos Gerais */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh; 
+}
+
+body{
+    background-color: #ccc;
+}
+
+.flex{
+    display: flex;
+}
+
+/* Header */
+header{
+    padding-inline: 4%;
+    width: 100%;
+}
+
+header .cabecalho .flex{
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .cabecalho .img-logo img{
+    width: 80px;
+    transition: .5s;
+}
+
+
+header .cabecalho ul{
+    list-style: none;
+}
+
+header .cabecalho ul li{
+    display: inline-block;
+    padding-left: 30px;
+}
+
+header .cabecalho ul li a{
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+header .cabecalho ul li a:hover{
+    color: #F32424;
+}
