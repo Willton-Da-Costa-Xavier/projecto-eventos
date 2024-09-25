@@ -10,17 +10,38 @@ html,body{
 }
 
 body{
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 .flex{
     display: flex;
 }
 
+.titulo{
+    font-size: 2.3em;
+    color: #F32424;
+}
+
+.btn{
+    background-color: #F32424;
+    border: 2px solid #F32424;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: .2s;
+    display: inline-block;
+}
+
+.btn:hover{
+    background-color: #ad1111;
+    border-color: #F32424;
+}
+
 /* Header */
 header{
     padding-inline: 4%;
     width: 100%;
+    background-color: #ccc;
 }
 
 header .cabecalho .flex{
@@ -51,4 +72,98 @@ header .cabecalho ul li a{
 
 header .cabecalho ul li a:hover{
     color: #F32424;
+}
+
+/* Estilo do Hero */
+.search-container{
+    text-align: center;
+    padding-top: 50px;
+    background-image: url("/img/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.search-container .titulo{
+    padding: 20px;
+    
+}
+
+.search-container  .form-search{
+    width: 500px;
+    padding: 5px;
+    outline: 0;
+    border: 0;
+}
+
+/* Estilo do titulo dos eventos */
+.conteudo-principal{
+    padding: 10px;
+}
+
+.conteudo-principal .conteudo-topo .titulo i{
+    font-size: 1em;
+}
+
+.eventos-container{
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.eventos-container .titulo span{
+    font-size: .7em;
+}
+
+/* Estilo dos eventos */
+.card-container{
+    display: flex;
+    margin-top: 20px;
+    
+}
+
+.card-container .card{
+    flex: 1 1 24%;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: .5%;
+    border: 2px solid #F32424;
+}
+
+.card-container .card img{
+    max-height: 238px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .card-body{
+    padding: 2%;
+}
+
+.card-body .card-date{
+    padding: 5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.592); 
+    margin-bottom: 10px;
+}
+
+.card-body .card-title{
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-body .card-participants{
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-body .btn{
+   width: 100px;
+   height: 30px;
+   margin-bottom: 10px;
 }
