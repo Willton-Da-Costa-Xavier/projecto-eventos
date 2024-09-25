@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
 }
 
 html,body{
@@ -166,4 +167,32 @@ header .cabecalho ul li a:hover{
    width: 100px;
    height: 30px;
    margin-bottom: 10px;
+}
+
+/* Estilo da pagina de criar */
+.event-create-container{
+    padding: 30px;
+}
+
+.event-create-container label{
+    font-weight: bold;
+}
+
+.event-create-container .form-group{
+    padding: 10px;
+}
+
+.event-create-container input,
+.event-create-container select,
+.event-create-container textarea{
+    font-size: 12px;
+}
+
+/* Estilo do footer */
+footer{
+    width: 100%;
+    background-color: #F32424;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
 }

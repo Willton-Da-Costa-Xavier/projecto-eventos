@@ -11,11 +11,17 @@
 
     <div class="conteudo-principal">
 
-        <div class="conteudo-topo">
+        <div class="conteudo-topo"> 
+            
+            @if ('search')
 
-            <h2 class="titulo"><i class="bi bi-calendar-event-fill"></i> Seus Eventos</h2>
+                <h2 class="titulo">Buscando por: {{ $search }}</h2>
 
-            <p class="msg">Nao ha eventos registrados</p>
+            @else
+                <h2 class="titulo"><i class="bi bi-calendar-event-fill"></i> Seus Eventos</h2>
+
+                <p class="msg">Nao ha eventos registrados</p>
+            @endif    
 
         </div>{{-- conteudo-topo --}}
 
@@ -120,4 +126,8 @@
         </div>{{-- eventos-container --}}
 
     </div>{{-- conteudo-principal --}}
+@endsection
+
+@section('footer')
+    <p>agenciaWDX&copy;</p>
 @endsection
