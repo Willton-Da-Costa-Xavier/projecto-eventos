@@ -13,7 +13,8 @@
 
         <div class="conteudo-topo"> 
             
-            @if ('search')
+            @if ('search' && $search!=
+            '')
 
                 <h2 class="titulo">Buscando por: {{ $search }}</h2>
 
@@ -21,110 +22,111 @@
                 <h2 class="titulo"><i class="bi bi-calendar-event-fill"></i> Seus Eventos</h2>
 
                 <p class="msg">Nao ha eventos registrados</p>
-            @endif    
+            @endif
 
         </div>{{-- conteudo-topo --}}
 
         <div class="eventos-container">
+            @foreach ($events as $event)
+                
+            <div class="events-row">
+                
+                    <h3 class="titulo"><span class="material-symbols-outlined">
+                        celebration
+                    </span> Festas
+                    </h3>
+                    <div class="card-container">
+                        <div class="card">
+                            <img src="/img/events/{{ $event->imagem }}" alt="">
+                            <div class="card-body">
+                                <p class="card-date">10/12/2024</p>
+                                <h5 class="card-title">{{ $event->titulo }}</h5>
+                                <p class="card-participants">X Participantes</p>
+                                <a href="#" class="btn">Saber Mais</a>
+                            </div>{{-- card-body --}}
+                        </div>{{-- card --}}
+                    </div>{{-- card-container --}}
+            </div>{{-- events-row --}}
 
-            <h3 class="titulo"><span class="material-symbols-outlined">
-                celebration
-                </span> Festas
-            </h3>
 
-            <div class="card-container">
 
-                <div class="card">
-                    <img src="/img/banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-date">10/12/2024</p>
-                        <h5 class="card-title">Evento de PHP</h5>
-                        <p class="card-participants">X Participantes</p>
-                        <a href="#" class="btn">Saber Mais</a>
+                <div class="events-row">
+                    <h3 class="titulo"><span class="material-symbols-outlined">
+                        groups
+                        </span> Eventos Sociais
+                    </h3>
+                    <div class="card-container">
+                    
+                        <div class="card">
+                            <img src="/img/banner.jpg" alt="">
+                            <div class="card-body">
+                                <p class="card-date">10/12/2024</p>
+                                <h5 class="card-title">Evento de PHP</h5>
+                                <p class="card-participants">X Participantes</p>
+                                <a href="#" class="btn">Saber Mais</a>
+                            </div>{{-- card-body --}}
+                        </div>{{-- card --}}
+                    </div>{{-- card-container --}}
+                </div>{{-- events-row --}}
 
-                    </div>{{-- card-body --}}
 
-                </div>{{-- card --}}
+            <div class="eventos-row">
 
-            </div>{{-- card-container --}}
+                <h3 class="titulo"><span class="material-symbols-outlined">
+                    festival
+                    </span> Festivais
+                </h3>
 
-        </div>{{-- eventos-container --}}
+                <div class="card-container">
+                    
+                    <div class="card">
+                        <img src="/img/banner.jpg" alt="">
+                        <div class="card-body">
+                            <p class="card-date">10/12/2024</p>
+                            <h5 class="card-title">Evento de PHP</h5>
+                            <p class="card-participants">X Participantes</p>
+                            <a href="#" class="btn">Saber Mais</a>
 
-        <div class="eventos-container">
+                        </div>{{-- card-body --}}
 
-            <h3 class="titulo"><span class="material-symbols-outlined">
-                groups
-                </span> Eventos Sociais
-            </h3>
+                    </div>{{-- card --}}
 
-            <div class="card-container">
+                </div>{{-- card-container --}}
 
-                <div class="card">
-                    <img src="/img/banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-date">10/12/2024</p>
-                        <h5 class="card-title">Evento de PHP</h5>
-                        <p class="card-participants">X Participantes</p>
-                        <a href="#" class="btn">Saber Mais</a>
+            </div>{{-- events-row --}}
 
-                    </div>{{-- card-body --}}
-
-                </div>{{-- card --}}
-
-            </div>{{-- card-container --}}
-
-        </div>{{-- eventos-container --}}
-
-        <div class="eventos-container">
-
-            <h3 class="titulo"><span class="material-symbols-outlined">
-                festival
-                </span> Festivais
-            </h3>
-
-            <div class="card-container">
-
-                <div class="card">
-                    <img src="/img/banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-date">10/12/2024</p>
-                        <h5 class="card-title">Evento de PHP</h5>
-                        <p class="card-participants">X Participantes</p>
-                        <a href="#" class="btn">Saber Mais</a>
-
-                    </div>{{-- card-body --}}
-
-                </div>{{-- card --}}
-
-            </div>{{-- card-container --}}
-
-        </div>{{-- eventos-container --}}
-
-        <div class="eventos-container">
-
-            <h3 class="titulo"><span class="material-symbols-outlined">
-                music_note
+            <div class="events-row">
+                
+                <h3 class="titulo"><span class="material-symbols-outlined">
+                    music_note
                 </span> Concertos
-            </h3>
+                </h3>
 
-            <div class="card-container">
+                <div class="card-container">
 
-                <div class="card">
-                    <img src="/img/banner.jpg" alt="">
-                    <div class="card-body">
-                        <p class="card-date">10/12/2024</p>
-                        <h5 class="card-title">Evento de PHP</h5>
-                        <p class="card-participants">X Participantes</p>
-                        <a href="#" class="btn">Saber Mais</a>
-
-                    </div>{{-- card-body --}}
-
-                </div>{{-- card --}}
-
-            </div>{{-- card-container --}}
-
-        </div>{{-- eventos-container --}}
-
+                    <div class="card">
+                        <img src="/img/banner.jpg" alt="">
+                        <div class="card-body">
+                            <p class="card-date">10/12/2024</p>
+                            <h5 class="card-title">Evento de PHP</h5>
+                            <p class="card-participants">X Participantes</p>
+                            <a href="#" class="btn">Saber Mais</a>
+                            
+                        </div>{{-- card-body --}}
+                        
+                    </div>{{-- card --}}
+                    
+                </div>{{-- card-container --}}
+                
+            </div>{{-- events-row --}}
+            @endforeach
+            @if(count($events) == 0 && $search)
+            <p>Nao foi possivel encontrar nenhum evento com {{$search}}! <a href="/">Ver todos</a></p>
+            @elseif(count($events) == 0)
+                <p>Nao ha eventos disponiveis</p>   
+            @endif    
+        </div>{{-- eventos-container --}}    
+        
     </div>{{-- conteudo-principal --}}
 @endsection
 

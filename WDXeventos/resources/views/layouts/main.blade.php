@@ -50,6 +50,14 @@
     </header>
 
     <main>
+        <div class="row-msg">
+            @if (session('msg'))
+
+                <p class="msg">{{ session('msg') }}</p>
+                
+            @endif
+        </div>
+        
         @yield('content')
     </main>
 
